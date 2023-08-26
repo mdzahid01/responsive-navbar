@@ -1,0 +1,173 @@
+*{
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style-type: none; 
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+}
+header{
+    position: fixed;
+    background-color: #43a5f6;
+    display: flex;
+    width: 100%;
+    min-height: 66px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    
+}
+header >nav{
+    transition: all .45s ease;
+}
+
+header .logo {
+    /* font-family: ; */
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.75em;
+    text-decoration: none;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    transition: all .45s ease;
+    /* font-size: 12px; */
+}
+
+header ul li{
+    list-style: none;
+    position: relative;
+}
+
+header ul li a{
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+}
+
+header ul li a:hover{
+    background-color: #2b93eb;
+}
+
+header ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #445964;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+header ul li:hover > ul{
+    display: block;
+}
+
+header ul li ul li{
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    position: relative;
+}
+
+header ul li ul li ul{
+    /* position: absolute; */
+    left: 200px;
+    top: 0;
+}
+.grandChild{
+    left: -200px;
+}
+
+@media (max-width:1150px){
+    header{
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width:800px) {
+    header{
+        padding: 10px 20px;
+        z-index: 2;
+    }
+    nav{
+        background-color: #445964;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    header nav{
+        top: -400px;
+        opacity: 0;
+    }
+    header nav  ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav  ul li{
+        width: 100%;
+    }
+
+    header nav  ul li ul,header nav  ul li ul li ul{
+        position: relative;
+        width: 100%;
+        left: 10px;
+        background-color: rgb(91, 120, 136);
+    }
+    .menuToggle{
+        display: block;
+        /* background-color: red; */
+        height: 50px;
+        width: 40px;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .menuToggle::before{
+        content: '';
+        position: absolute;
+        width: inherit;
+        background-color: #fff;
+        height: 3px;
+        transition: transform .4s ease;
+        transform: translateY(-12px); 
+        box-shadow: 0 12px #fff;
+    }
+    .menuToggle::after{
+        content: '';
+        transition: transform .4s ease;
+        position: absolute;
+        width: inherit;
+        background-color: #fff;
+        height: 3px;
+        transform: translateY(12px);
+    }
+
+    header.active .menuToggle::before{
+        transform: rotate(45deg);
+        box-shadow: 0 0 #fff;
+    }
+    
+    header.active .menuToggle::after{
+        transform: rotate(-45deg);
+    }
+    
+    header.active > nav{
+        top: 66px;
+        opacity: 1;
+    }
+}

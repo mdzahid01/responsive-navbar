@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img\favicon.jpg" sizes="32x32">
+    <title>responsive navbar</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class="fa-brands fa-reddit"></i><span>zahid</span></a>
+        <div class="menuToggle"></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Dropdown <b>▼</b></a>
+                    <ul>
+                        <li><a href="">Product-1</a></li>
+                        <li><a href="">Product-2</a></li>
+                        <li><a href="">Product-3 <b>+</b></a>
+                            <ul>
+                                <li><a href="">Html</a></li>
+                                <li><a href="">Css</a></li>
+                                <li><a href="">Javascript</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog <b>▼</b></a>
+                    <ul>
+                        <li><a href="">Post-1</a></li>
+                        <li><a href="">Post-2 <b>+</b></a>
+                            <ul class="grandChild">
+                                <li><a href="">Html</a></li>
+                                <li><a href="">Css</a></li>
+                                <li><a href="">zahid</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Post-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <script src="script.js" type="text/javascript"></script>
+
+</body>
+</html>
